@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name" translatable="false">ClickOn</string>
+    <string name="clickondevice" translatable="false">ClickOn</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="inicio">Início</string>
+    <string name="celular">Celular</string>
+    <string name="computador">Computador</string>
+    <string name="tablet">Tablet</string>
+    <string name="express">Express</string>
+    <string name="banner">banner</string>
+    <string name="dotted">&#8226;</string>
+    <string name="assistances">Assistência</string>
+    <string name="device">Device</string>
+    <string name="endereco_atual">Endereço atual</string>
+    <string name="device_products_logo">Device</string>
+</resources>
