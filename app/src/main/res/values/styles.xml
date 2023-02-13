@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <style name="rounded">
             <item name="cornerFamily">rounded</item>
             <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="arimaMadurai" parent="android:Widget.TextView">
+        <item name="textAllCaps">false</item>
+        <item name="android:fontFamily">@font/arima_madurai </item>
     </style>
 </resources>

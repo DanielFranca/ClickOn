@@ -30,8 +30,6 @@ class CategoryView(viewGroup: ViewGroup): ATViewHolder<Category, CategoryItemBin
                 }
 
             })
-
-
     }
 
 }

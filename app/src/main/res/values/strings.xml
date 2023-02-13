@@ -13,5 +13,10 @@
     <string name="assistances">Assistência</string>
     <string name="device">Device</string>
     <string name="endereco_atual">Endereço atual</string>
+    <string name="font_arima_madurai_medium">fonts/ArimaMadurai-Medium.ttf</string>
     <string name="device_products_logo">Device</string>
+    <string name="text_diagnostic_phone">Ihhhh... Deu ruim por aí né? Deixa que a gente resolve pra você, diz aí o que aconteceu com seu celular?</string>
+    <string name="text_diagnostic_computer">Ihhhh... Deu ruim por aí né? Deixa que a gente resolve pra você, diz aí o que aconteceu com seu computador?</string>
+    <string name="text_diagnostic_tablet">Ihhhh... Deu ruim por aí né? Deixa que a gente resolve pra você, diz aí o que aconteceu com seu tablet?</string>
+
 </resources>

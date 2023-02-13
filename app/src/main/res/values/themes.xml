@@ -10,6 +10,9 @@
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/white</item>
         <item name="android:navigationBarColor">@color/white</item>
+
+        <item name="android:textViewStyle">@style/arimaMadurai</item>
+
     </style>
         <!-- Status bar color. -->
 
