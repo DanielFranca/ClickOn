@@ -8,16 +8,6 @@
     tools:ignore="ScrollViewCount">
 
 
-    <View
-        android:id="@+id/bg_category"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/blue"
-        app:layout_constraintBottom_toTopOf="@+id/txt_category"
-        app:layout_constraintDimensionRatio="21:9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -26,6 +16,7 @@
             android:id="@+id/img_category"
             android:layout_width="80dp"
             android:layout_height="82dp"
+            android:background="@drawable/rounded_corner"
             android:contentDescription="@string/banner"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

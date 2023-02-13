@@ -9,4 +9,8 @@
         <item name="textAllCaps">false</item>
         <item name="android:fontFamily">@font/arima_madurai </item>
     </style>
+    
+    <style name="rounded_assistances">
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>

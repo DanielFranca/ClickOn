@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import androidx.fragment.app.replace
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.clickon.FragmentsCategories.*
 import com.example.clickon.R
@@ -15,9 +14,7 @@ import com.example.clickon.ui.Search.SearchFragment
 import com.example.clickon.ui.home.HomeFragment
 import com.example.clickon.ui.services.ServicesFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayoutMediator
-import java.lang.reflect.Array.newInstance
 
 class ProductsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityProductsBinding

@@ -20,9 +20,8 @@ class CategoryView(viewGroup: ViewGroup): ATViewHolder<Category, CategoryItemBin
             .into(binding.imgCategory, object : Callback {
                 override fun onSuccess() {
                     val shape = GradientDrawable()
-                    shape.cornerRadius = 10f
-                    shape.setColor(item.color.toInt())
-                    binding.bgCategory.background = shape
+                    shape.cornerRadius = 30f
+                    binding.imgCategory.background = shape
                 }
 
                 override fun onError(e: Exception?) {

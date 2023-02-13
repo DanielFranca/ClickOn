@@ -17,35 +17,36 @@ class StartFragment : Fragment(R.layout.fragment_start) {
 
     private var binding: FragmentStartBinding? = null
 
-    private val categoryAdapter = ATAdapter({
-        CategoryView(it)
-    })
+    private val categoryAdapter = ATAdapter({ CategoryView(it)})
     private val bannerAdapter = ATAdapter({ BannerView(it)})
+    private val assistancesAdapter = ATAdapter({ AssistancesView(it)})
 
     private val filters = arrayOf(
-        FilterItem(1,"Ordenar",  closeIcon = R.drawable.ic_keyboard_arrow ),
         FilterItem(2,"Para retirar", icon = R.drawable.ic_baseline_directions_walk_24),
         FilterItem(3,"Perto de mim", icon = R.drawable.ic_keyboard_arrow),
         FilterItem(4,"Entrega grátis", icon = R.drawable.ic_back),
         FilterItem(5, "Ofertas", icon = R.drawable.ic_offer),
-        FilterItem(6, "Filtros", closeIcon = R.drawable.ic_filter_list)
     )
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         categoryAdapter.items = arrayListOf( //não está sendo usado por enquanto
-            Category(1, "https://media.licdn.com/dms/image/C4D22AQEyOzUpgbTmlA/feedshare-shrink_1280/0/1669147593672?e=1678320000&v=beta&t=P4HaOA87JDB5HhC4I_yglyzwRhbOdnSTnUkUGQ8QCz0", "Assistências", 0x3b69fa),
-            Category(2, "https://media.licdn.com/dms/image/C4D22AQEyOzUpgbTmlA/feedshare-shrink_1280/0/1669147593672?e=1678320000&v=beta&t=P4HaOA87JDB5HhC4I_yglyzwRhbOdnSTnUkUGQ8QCz0", "Shopping", 0x3b69fa),
-            Category(3, "https://media.licdn.com/dms/image/C4D22AQEyOzUpgbTmlA/feedshare-shrink_1280/0/1669147593672?e=1678320000&v=beta&t=P4HaOA87JDB5HhC4I_yglyzwRhbOdnSTnUkUGQ8QCz0", "Promoções", 0x3b69fa),
-            Category(3, "https://media.licdn.com/dms/image/C4D22AQEyOzUpgbTmlA/feedshare-shrink_1280/0/1669147593672?e=1678320000&v=beta&t=P4HaOA87JDB5HhC4I_yglyzwRhbOdnSTnUkUGQ8QCz0", "Diagnóstico", 0x3b69fa),
+            Category(1, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTiFRo5ict3LbUVNviosA9I1tFzquHOpf5Y0rOPmWqan3BpKgsFPPFA98X8o0uwMRhmhU6GiJfG4MatZsdb__cJ_xp4VA=w1359-h599", "Assistências"),
+            Category(2, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOSoRILnWKPzl9ONCRxCWL7ypQXXH9qc_xUDzC3NgAOYXBUR4NFVOMT-4xzPWIZRuNWzIUcr-b7n-EiiWq9JaJz5YMjgfw=w1359-h599","Shopping"),
+            Category(3, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOSnq8AED1vIXGzEHEGXshGQVmxaD-9Byv1peDe_iCtr7IQsipA1lMtYmEXmEshzILjbEyt01JvC3r8td-1DrpWU-6Ve=w1359-h599", "Promoções"),
+            Category(4, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOQBAprbPfZ5DTQzhCylxp5D5EKVpOL5uRSnsOf8FveIkJPnmIZ4_6mkNmYop7PEIZSWjcrz46rlYn9kfT0qFUcI5Q61MQ=w1359-h599", "Diagnóstico"),
             )
 
         bannerAdapter.items = arrayListOf(
-            Banner(1, "https://media.licdn.com/dms/image/C4D22AQEyOzUpgbTmlA/feedshare-shrink_1280/0/1669147593672?e=1678320000&v=beta&t=P4HaOA87JDB5HhC4I_yglyzwRhbOdnSTnUkUGQ8QCz0"),
+            Banner(1, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599"),
             Banner(2, "https://media.licdn.com/dms/image/C4D22AQEyOzUpgbTmlA/feedshare-shrink_1280/0/1669147593672?e=1678320000&v=beta&t=P4HaOA87JDB5HhC4I_yglyzwRhbOdnSTnUkUGQ8QCz0"),
             Banner(3, "https://media.licdn.com/dms/image/C4D22AQEyOzUpgbTmlA/feedshare-shrink_1280/0/1669147593672?e=1678320000&v=beta&t=P4HaOA87JDB5HhC4I_yglyzwRhbOdnSTnUkUGQ8QCz0"),
             Banner(4, "https://media.licdn.com/dms/image/C4D22AQEyOzUpgbTmlA/feedshare-shrink_1280/0/1669147593672?e=1678320000&v=beta&t=P4HaOA87JDB5HhC4I_yglyzwRhbOdnSTnUkUGQ8QCz0")
+        )
+
+        assistancesAdapter.items = arrayListOf(
+            Assistances(1, "http.com.br", "assistência do zé")
         )
 
         binding = FragmentStartBinding.bind(view)
@@ -58,6 +59,9 @@ class StartFragment : Fragment(R.layout.fragment_start) {
             it.rvBanners.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             it.rvBanners.adapter = bannerAdapter
             it.rvBanners.addOnScrollListener(object : RecyclerView.OnScrollListener(){
+
+
+
                 override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                     if(newState == RecyclerView.SCROLL_STATE_IDLE) {
                         notifyPositionChanged(recyclerView)
