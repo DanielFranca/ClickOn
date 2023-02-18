@@ -20,5 +20,27 @@
     <string name="text_diagnostic_tablet">Ihhhh... Deu ruim por aí né? Deixa que a gente resolve pra você, diz aí o que aconteceu com seu tablet?</string>
     <string name="destaques">Destaques</string>
     <string name="ver_mais">Ver mais</string>
+    <string name="encontre_servico">Encontre o seu serviço aqui</string>
+    <string name="profile">Profile</string>
+    <string name="entrar">Entrar</string>
+    <string name="imagem">imagem</string>
+    <string name="about_us">Sobre nós</string>
+    <string name="image_about_us">image about us</string>
+    <string name="image_register">image register</string>
+    <string name="register_assistances">Cadastre-se como uma assistência</string>
+    <string name="register_motorist">Cadastre-se como motorista</string>
+    <string name="image_motorist">image motorist</string>
+    <string name="termos_de_uso">Termos de uso</string>
+    <string name="terms_image">terms image</string>
+    <string name="terms_of_use">Termos de uso</string>
+    <string name="arrow_terms">arrow_terms</string>
+    <string name="privacy">Política de Privacidade</string>
+    <string name="image_politic">image_politic</string>
+    <string name="privacy_politic">Política de Privacidade</string>
+    <string name="image_arrow">image_arrow</string>
+    <string name="cadastrar_se">Cadastrar-se</string>
+    <string name="login">Entrar</string>
+    <string name="see_more">Ver mais</string>
+    <string name="assistances_success">Assistências de sucesso</string>
 
 </resources>

@@ -1,51 +1,226 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="@color/white"
-    android:id="@+id/container_profile"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="385dp"
-        android:layout_height="95dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="11dp">
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_height="112dp"
+        android:gravity="center"
+        android:paddingHorizontal="16dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp">
+        <ImageView
+            android:id="@+id/image"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="left"
+            android:background="@drawable/ic_circle" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button_address"
-                android:layout_width="348dp"
-                android:layout_height="48dp"
-                android:background="@drawable/rounded_edittext_address"
-                android:drawableEnd="@drawable/ic_local_address"
-                android:drawablePadding="150dp"
-                android:hint="@string/endereco_atual"
-                android:minHeight="48dp"
-                android:padding="8dp"
-                android:textColorHint="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="16dp" />
+                android:id="@+id/btnCadastro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_corner"
+                android:text="Cadastrar-se"
+                android:textAllCaps="false" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/btnEntrar"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/rounded_corner"
+                android:backgroundTint="@color/blue"
+                android:fontFamily="@font/arima_madurai_bold"
+                android:text="Entrar"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
-    </androidx.appcompat.widget.Toolbar>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="1dp"
+        android:background="#A8A8A8" />
+
+    <LinearLayout
+        android:id="@+id/divider2"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_sobrenos"
+            android:text="@string/about_us"
+            android:drawablePadding="10dp"
+            android:textAlignment="textStart"
+            android:fontFamily="@font/arima_madurai_bold"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_right"
+            android:layout_marginRight="16dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/divider3"
+        android:layout_marginTop="0dp"
+        android:layout_below="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/arima_madurai_bold"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_assistances"
+            android:text="@string/register_assistances"
+            android:drawablePadding="10dp"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_right"
+            android:layout_marginRight="16dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/divider4"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/arima_madurai_bold"
+            android:drawableStart="@drawable/ic_motorist"
+            android:text="@string/register_motorist"
+            android:drawablePadding="10dp"
+            android:background="@android:color/transparent"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_right"
+            android:layout_marginRight="16dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/divider5"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/arima_madurai_bold"
+            android:drawableStart="@drawable/ic_terms"
+            android:text="@string/termos_de_uso"
+            android:drawablePadding="10dp"
+            android:background="@android:color/transparent"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_right"
+            android:layout_marginRight="16dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/divider6"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/divider5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/arima_madurai_bold"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/ic_politica"
+            android:text="@string/privacy"
+            android:drawablePadding="10dp"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_right"
+            android:layout_marginRight="16dp"/>
+
+    </LinearLayout>
 
 
-
-
-</FrameLayout>
+</RelativeLayout>

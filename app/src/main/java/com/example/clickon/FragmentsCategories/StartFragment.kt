@@ -1,5 +1,6 @@
 package com.example.clickon.FragmentsCategories
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.widget.LinearLayout
@@ -19,7 +20,7 @@ class StartFragment : Fragment(R.layout.fragment_start) {
 
     private val categoryAdapter = ATAdapter({ CategoryView(it)})
     private val bannerAdapter = ATAdapter({ BannerView(it)})
-    private val assistancesAdapter = ATAdapter({ AssistancesView(it)})
+    private val assistancesAdapter = ATAdapter({AssistancesView(it)})
 
     private val filters = arrayOf(
         FilterItem(2,"Para retirar", icon = R.drawable.ic_baseline_directions_walk_24),
@@ -27,6 +28,12 @@ class StartFragment : Fragment(R.layout.fragment_start) {
         FilterItem(4,"Entrega grátis", icon = R.drawable.ic_back),
         FilterItem(5, "Ofertas", icon = R.drawable.ic_offer),
     )
+
+    override fun onResume() {
+        super.onResume()
+        categoryAdapter.notifyDataSetChanged()
+        bannerAdapter.notifyDataSetChanged()
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -46,8 +53,13 @@ class StartFragment : Fragment(R.layout.fragment_start) {
         )
 
         assistancesAdapter.items = arrayListOf(
-            Assistances(1, "http.com.br", "assistência do zé")
+            Assistances(1, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "ClickOn Celulares" ),
+            Assistances(2, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "ClickOn Celulares" ),
+            Assistances(3, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "ClickOn Celulares" ),
+            Assistances(4, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "ClickOn Celulares" ),
+            Assistances(5, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "ClickOn Celulares" )
         )
+
 
         binding = FragmentStartBinding.bind(view)
 
@@ -56,12 +68,13 @@ class StartFragment : Fragment(R.layout.fragment_start) {
             it.rvCategory.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             it.rvCategory.adapter = categoryAdapter
 
+            it.rvAssistances.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            it.rvAssistances.adapter = assistancesAdapter
+
+
             it.rvBanners.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             it.rvBanners.adapter = bannerAdapter
             it.rvBanners.addOnScrollListener(object : RecyclerView.OnScrollListener(){
-
-
-
                 override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                     if(newState == RecyclerView.SCROLL_STATE_IDLE) {
                         notifyPositionChanged(recyclerView)
@@ -70,15 +83,12 @@ class StartFragment : Fragment(R.layout.fragment_start) {
                     }
                 })
 
-
             addDots(it.dots, bannerAdapter.items.size, 0)
 
             filters.forEach { filter ->
                it.chipGroupFilter.addView(filter.toChip(requireContext()))
            }
         }
-
-
     }
 
     private fun addDots(container: LinearLayout, size: Int, position: Int) {
@@ -97,18 +107,16 @@ class StartFragment : Fragment(R.layout.fragment_start) {
         }
     }
 
-    private var position: Int? = RecyclerView.NO_POSITION
-    private val snapHelper = LinearSnapHelper()
 
     private fun notifyPositionChanged(recyclerView: RecyclerView) {
-        val layoutManager = recyclerView.layoutManager
-        val view = snapHelper.findSnapView(layoutManager)
-        val position = if (view == null) RecyclerView.NO_POSITION else layoutManager?.getPosition(view)
+        val centerView = recyclerView.findChildViewUnder(
+            recyclerView.width / 2.0f,
+            recyclerView.height / 2.0f
+        )
 
-        val positionChanged = this.position != position
-        if(positionChanged) {
-            addDots(binding!!.dots, bannerAdapter.items.size, position ?: 0)
+        centerView?.let {
+            val position = recyclerView.getChildAdapterPosition(centerView)
+            binding?.dots?.let { it1 -> addDots(it1, bannerAdapter.items.size, position) }
         }
-        this.position = position
     }
 }

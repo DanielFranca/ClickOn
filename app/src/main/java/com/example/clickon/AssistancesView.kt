@@ -13,7 +13,7 @@ class AssistancesView(viewGroup: ViewGroup) : ATViewHolder<Assistances, Assistan
     ) {
         override fun bind(item: Assistances) {
             Picasso.get()
-                .load(item.assistancesUrl)
+                .load(item.bannerUrl)
                 .into(binding.imgAssistances)
             binding.txtAssistances.text = item.text
         }

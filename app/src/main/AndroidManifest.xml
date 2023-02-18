@@ -14,16 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="33">
-
-        <activity
-            android:name=".pages.ProductsActivity"
-            android:exported="false"
-            android:theme="@style/Theme.ClickOn.">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-
         <activity
             android:name=".pages.MainActivity"
             android:exported="true">
@@ -36,6 +26,15 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".pages.ProductsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ClickOn.">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
 
         <meta-data
