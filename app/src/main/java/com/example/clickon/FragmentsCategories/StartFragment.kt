@@ -21,6 +21,7 @@ class StartFragment : Fragment(R.layout.fragment_start) {
     private val categoryAdapter = ATAdapter({ CategoryView(it)})
     private val bannerAdapter = ATAdapter({ BannerView(it)})
     private val assistancesAdapter = ATAdapter({AssistancesView(it)})
+    private val MoreAssistancesAdapter = ATAdapter({MoreAssistancesView(it)})
 
     private val filters = arrayOf(
         FilterItem(2,"Para retirar", icon = R.drawable.ic_baseline_directions_walk_24),
@@ -60,6 +61,20 @@ class StartFragment : Fragment(R.layout.fragment_start) {
             Assistances(5, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "ClickOn Celulares" )
         )
 
+        MoreAssistancesAdapter.items = arrayListOf(
+            MoreAssistances(1, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
+            MoreAssistances(2, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
+            MoreAssistances(3, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
+            MoreAssistances(4, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
+            MoreAssistances(5, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
+            MoreAssistances(6, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
+            MoreAssistances(7, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
+            MoreAssistances(8, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
+            MoreAssistances(9, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
+            MoreAssistances(10, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
+            MoreAssistances(11, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00)
+        )
+
 
         binding = FragmentStartBinding.bind(view)
 
@@ -71,6 +86,8 @@ class StartFragment : Fragment(R.layout.fragment_start) {
             it.rvAssistances.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             it.rvAssistances.adapter = assistancesAdapter
 
+            it.rvMoreAssistances.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            it.rvMoreAssistances.adapter = MoreAssistancesAdapter
 
             it.rvBanners.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             it.rvBanners.adapter = bannerAdapter

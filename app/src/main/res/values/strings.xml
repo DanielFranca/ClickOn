@@ -2,7 +2,7 @@
     <string name="app_name" translatable="false">ClickOn</string>
     <string name="clickondevice" translatable="false">ClickOn</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="shop_price">%1$s min \u2022 R$ %2$.2f</string>
     <string name="inicio">Início</string>
     <string name="celular">Celular</string>
     <string name="computador">Computador</string>
@@ -42,5 +42,7 @@
     <string name="login">Entrar</string>
     <string name="see_more">Ver mais</string>
     <string name="assistances_success">Assistências de sucesso</string>
+    <string name="sucessos_na_click">Sucessos na Click</string>
+    <string name="shop_category">\u2022 %1$s  \u2022 %2$.1f km</string>
 
 </resources>

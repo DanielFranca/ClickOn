@@ -1,6 +1,7 @@
 package com.example.clickon.pages
 
 import HomeFragment
+import PhoneFragment
 import SearchFragment
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

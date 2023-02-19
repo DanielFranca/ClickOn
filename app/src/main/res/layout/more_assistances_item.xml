@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="2dp"
+    android:layout_marginVertical="10dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_assistances"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="4dp"
+        android:background="#FF0000"
+        android:padding="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/rounded_assistances"
+        app:strokeColor="@color/gray"
+        app:strokeWidth="3dp" />
+
+    <TextView
+        android:id="@+id/txt_assistances"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/img_assistances"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Teste de loja" />
+
+    <TextView
+        android:id="@+id/txt_star"
+        android:layout_width="54dp"
+        android:layout_height="22dp"
+        android:textColor="@color/gold"
+        android:textSize="14sp"
+        android:drawablePadding="5dp"
+        app:drawableStartCompat="@drawable/ic_star"
+        app:drawableTint="@color/gold"
+        app:layout_constraintStart_toStartOf="@id/txt_assistances"
+        app:layout_constraintTop_toBottomOf="@id/txt_assistances"
+        tools:text="4,7" />
+
+    <TextView
+        android:id="@+id/txt_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textSize="14sp"
+        android:drawablePadding="20dp"
+        app:layout_constraintStart_toEndOf="@+id/txt_star"
+        app:layout_constraintTop_toTopOf="@id/txt_star"
+        tools:text="\u2022 Celulares \u2022 1,5 km" />
+
+    <TextView
+        android:id="@+id/txt_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/txt_star"
+        app:layout_constraintTop_toBottomOf="@id/txt_star"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="60-70 min \u2022 R$6,00 " />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
