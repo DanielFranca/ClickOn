@@ -1,0 +1,268 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="20dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="264dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/arima_madurai_bold"
+        android:text="@string/model_phone"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_default="wrap"/>
+
+
+    <AutoCompleteTextView
+        android:id="@+id/button_search_phones"
+        android:layout_width="328dp"
+        android:layout_height="48dp"
+        android:background="@drawable/rounded_edittext_address"
+        android:drawableEnd="@drawable/ic_phone_default"
+        android:drawablePadding="150dp"
+        android:drawableTint="@color/white"
+        android:hint="Encontrar modelo "
+        android:minHeight="48dp"
+        android:padding="8dp"
+        android:textColorHint="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.033" />
+
+
+    <TextView
+        android:id="@+id/txt_marcas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/arima_madurai_bold"
+        android:text="Marcas"
+        android:textColor="#000000"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_search_phones" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_iplace"
+        android:layout_width="171dp"
+        android:layout_height="141dp"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_marcas">
+
+        <ImageButton
+            android:id="@+id/button_iplace"
+            android:layout_width="143dp"
+            android:layout_height="118dp"
+            android:adjustViewBounds="true"
+            android:background="#00FF0000"
+            android:clipToOutline="true"
+            android:outlineProvider="background"
+            android:padding="20dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/logo_iphonepng" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_xiaomi"
+        android:layout_width="168dp"
+        android:layout_height="139dp"
+        android:layout_marginLeft="190dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toStartOf="@id/card_samsung"
+        app:layout_constraintStart_toEndOf="@id/card_iplace"
+        app:layout_constraintTop_toBottomOf="@id/txt_marcas">
+
+        <ImageButton
+            android:id="@+id/button_xiaomi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="#00FF0000"
+            android:clipToOutline="true"
+            android:outlineProvider="background"
+            android:padding="20dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_xiaomi" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_motorola"
+        android:layout_width="177dp"
+        android:layout_height="143dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="144dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_marcas">
+
+        <ImageButton
+            android:id="@+id/button_motorola"
+            android:layout_width="100dp"
+            android:layout_height="72dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:adjustViewBounds="true"
+            android:background="#00FF0000"
+            android:clipToOutline="true"
+            android:outlineProvider="background"
+            android:padding="20dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_motorola1" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_samsung"
+        android:layout_width="175dp"
+        android:layout_height="136dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="148dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toStartOf="@id/card_samsung"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/card_iplace"
+        app:layout_constraintTop_toBottomOf="@id/txt_marcas">
+
+        <ImageButton
+            android:id="@+id/button_samsung"
+            android:layout_width="150dp"
+            android:layout_height="102dp"
+            android:layout_marginRight="20dp"
+            android:adjustViewBounds="true"
+            android:backgroundTint="@color/white"
+            android:clipToOutline="true"
+            android:outlineProvider="background"
+            android:padding="20dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/samsung_remov" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txt_models"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/arima_madurai_bold"
+        android:text="Modelos mais procurados"
+        android:textColor="#000000"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.123"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_motorola" />
+
+    <Button
+        android:id="@+id/txt_iphone"
+        android:layout_width="166dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="#D3D3D3"
+        android:fontFamily="@font/arima_madurai_bold"
+        android:text="Iphone XR"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_models" />
+
+    <Button
+        android:id="@+id/galaxy_a71"
+        android:layout_width="166dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="#D3D3D3"
+        android:fontFamily="@font/arima_madurai_bold"
+        android:text="Galaxy A71"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_iphone" />
+
+
+
+    <Button
+        android:id="@+id/MotoEdge"
+        android:layout_width="166dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="#D3D3D3"
+        android:fontFamily="@font/arima_madurai_bold"
+        android:text="Iphone XR"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_models" />
+
+    <Button
+        android:id="@+id/galaxy_a20"
+        android:layout_width="166dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="#D3D3D3"
+        android:fontFamily="@font/arima_madurai_bold"
+        android:text="Galaxy A50"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_iphone" />
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="199dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/blue"
+        android:fontFamily="@font/arima_madurai_bold"
+        android:text="Voltar"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/galaxy_a71" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
