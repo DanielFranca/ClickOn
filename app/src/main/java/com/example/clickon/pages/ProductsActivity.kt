@@ -51,6 +51,38 @@ class ProductsActivity : AppCompatActivity() {
 
         setupViews()
     }
+    override fun onResume() {
+        super.onResume()
+
+        // Recupera o fragment atualmente exibido na tela
+        val currentFragment = supportFragmentManager.findFragmentById(R.id.container_products)
+
+        // Se o fragment atual não for nulo, atualiza o conteúdo do mesmo
+        if (currentFragment != null) {
+            when (currentFragment) {
+                is HomeFragment -> {
+                    // Atualiza o conteúdo do fragment HomeFragment
+                }
+                is SearchFragment -> {
+                    // Atualiza o conteúdo do fragment SearchFragment
+                }
+                is OrdersFragment -> {
+                    // Atualiza o conteúdo do fragment OrdersFragment
+                }
+                is ProfileFragment -> {
+                    // Atualiza o conteúdo do fragment ProfileFragment
+                }
+            }
+        }
+
+        // Atualiza o conteúdo do ViewPager2 (se necessário)
+        val currentPosition = viewPager.currentItem
+        val adapter = viewPager.adapter as? tabViewPagerAdapter
+        if (adapter != null && adapter.tabs.isNotEmpty() && currentPosition >= 0 && currentPosition < adapter.tabs.size) {
+            val currentTab = adapter.tabs[currentPosition]
+            // Atualiza o conteúdo do fragment atualmente exibido no ViewPager2
+        }
+    }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
