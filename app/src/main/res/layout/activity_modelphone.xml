@@ -30,6 +30,7 @@
         android:drawableEnd="@drawable/ic_phone_default"
         android:drawablePadding="150dp"
         android:drawableTint="@color/white"
+        android:textColor="@color/white"
         android:hint="Encontrar modelo "
         android:minHeight="48dp"
         android:padding="8dp"

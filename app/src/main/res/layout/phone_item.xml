@@ -1,7 +1,8 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
+    android:background="@drawable/rounded_corner"
     android:padding="16dp">
 
     <ImageView
@@ -11,19 +12,30 @@
         android:src="@drawable/iphone11_64gb" />
 
     <TextView
+        android:layout_marginLeft="20dp"
+        android:id="@+id/text_brand"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/image_phone"
+        android:textAppearance="?attr/textAppearanceSubtitle1" />
+
+    <TextView
         android:id="@+id/text_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
+        android:layout_below="@id/text_brand"
+        android:layout_toEndOf="@id/image_phone"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:text="Phone Name"
         android:textSize="16sp" />
 
-
-    <TextView
-        android:id="@+id/text_brand"
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?attr/textAppearanceSubtitle1" />
+        android:src="@drawable/ic_arrow_right"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true" />
 
-</LinearLayout>
+</RelativeLayout>
