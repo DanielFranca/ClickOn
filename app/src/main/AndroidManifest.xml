@@ -46,6 +46,70 @@
                 android:value="" />
         </activity>
 
+
+        <activity
+            android:name=".DiagnosticGeral.PhoneDetailsActivityScreen"
+            android:exported="false"
+            android:theme="@style/Theme.ClickOn.">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".DiagnosticPhone.AddictedBattery"
+            android:exported="false"
+            android:theme="@style/Theme.ClickOn.">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".DiagnosticPhone.SoftwareProblem"
+            android:exported="false"
+            android:theme="@style/Theme.ClickOn.">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".Cards.CardsPhone.AppleActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ClickOn.">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".Cards.CardsPhone.SamsungActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ClickOn.">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".Cards.CardsPhone.XiaomiActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ClickOn.">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".Cards.CardsPhone.MotorolaActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ClickOn.">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

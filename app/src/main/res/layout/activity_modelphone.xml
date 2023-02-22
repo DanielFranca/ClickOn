@@ -2,6 +2,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/container_modelphone"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="20dp"
     android:layout_height="match_parent">
@@ -31,7 +32,7 @@
         android:drawablePadding="150dp"
         android:drawableTint="@color/white"
         android:textColor="@color/white"
-        android:hint="Encontrar modelo "
+        android:hint="@string/encontrar"
         android:minHeight="48dp"
         android:padding="8dp"
         android:textColorHint="@color/white"
@@ -264,6 +265,9 @@
         app:layout_constraintHorizontal_bias="0.547"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/galaxy_a71" />
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -45,5 +45,7 @@
     <string name="sucessos_na_click">Sucessos na Click</string>
     <string name="shop_category">\u2022 %1$s  \u2022 %2$.1f km</string>
     <string name="model_phone">Qual o modelo do seu celular?</string>
+    <string name="encontrar">Encontrar modelo</string>
+    <string name="phone_model">Modelo do telefone: %s</string>
 
 </resources>

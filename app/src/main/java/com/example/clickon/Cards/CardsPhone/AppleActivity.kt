@@ -1,31 +1,26 @@
-package com.example.clickon.DiagnosticPhone
+package com.example.clickon.Cards.CardsPhone
 
 import PhoneItem
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.InputMethodManager
-import android.widget.*
+import android.widget.ArrayAdapter
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.cardview.widget.CardView
-import androidx.fragment.app.FragmentTransaction
-import com.example.clickon.Cards.CardsPhone.*
 import com.example.clickon.DiagnosticGeral.PhoneDetailsActivityScreen
 import com.example.clickon.R
 
-
-class DiagnosticBrokenScreen : AppCompatActivity() {
+class AppleActivity : AppCompatActivity() {
 
     private lateinit var phoneList: List<PhoneItem>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_modelphone)
+        setContentView(R.layout.fragment_apple)
         supportActionBar?.hide()
-
 
 
         val phoneSuggestions = listOf(
@@ -374,7 +369,8 @@ class DiagnosticBrokenScreen : AppCompatActivity() {
                 val phoneItem = getItem(position)
                 view.findViewById<TextView>(R.id.text_phone).text = phoneItem?.toString()
                 view.findViewById<TextView>(R.id.text_brand).text = phoneItem?.getBrand()
-                view.findViewById<ImageView>(R.id.image_phone).setImageResource(phoneItem?.getFlagImage() ?: 0)
+                view.findViewById<ImageView>(R.id.image_phone)
+                    .setImageResource(phoneItem?.getFlagImage() ?: 0)
 
                 view.setOnClickListener {
                     val phoneModel = phoneItem?.toString() ?: ""
@@ -383,63 +379,6 @@ class DiagnosticBrokenScreen : AppCompatActivity() {
                     context.startActivity(intent)
                 }
                 return view
-            }
-        }
-
-        val cardIplace = findViewById<CardView>(R.id.card_iplace)
-        val btnIplace = findViewById<ImageButton>(R.id.button_iplace)
-        btnIplace.setOnClickListener {
-            val intent = Intent(this, AppleActivity::class.java)
-            startActivity(intent)
-        }
-
-        val cardXiaomi = findViewById<CardView>(R.id.card_xiaomi)
-        val btnXiaomi = findViewById<ImageButton>(R.id.button_xiaomi)
-        btnXiaomi.setOnClickListener {
-            val intent = Intent(this, XiaomiActivity::class.java)
-            startActivity(intent)
-        }
-
-        val cardMotorola = findViewById<CardView>(R.id.card_motorola)
-        val btnMotorola = findViewById<ImageButton>(R.id.button_motorola)
-        btnMotorola.setOnClickListener {
-            val intent = Intent(this, MotorolaActivity::class.java)
-            startActivity(intent)
-        }
-
-        val cardSamsung = findViewById<CardView>(R.id.card_samsung)
-        val btnSamsung = findViewById<ImageButton>(R.id.button_samsung)
-        btnSamsung.setOnClickListener {
-            val intent = Intent(this, SamsungActivity::class.java)
-            startActivity(intent)
-        }
-
-
-        val autoCompleteTextView = findViewById<AutoCompleteTextView>(R.id.button_search_phones)
-        autoCompleteTextView.setAdapter(adapter)
-
-        autoCompleteTextView.onItemClickListener = AdapterView.OnItemClickListener { _, _, _, _ ->
-            val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            imm.hideSoftInputFromWindow(autoCompleteTextView.windowToken, 0)
-        }
-
-        autoCompleteTextView.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
-            if (hasFocus) {
-                autoCompleteTextView.hint = null // Oculte o hint
-                autoCompleteTextView.setCompoundDrawablesWithIntrinsicBounds(
-                    0,
-                    0,
-                    R.drawable.ic_lupa,
-                    0
-                ) // Exiba o ícone de digitação
-            } else {
-                autoCompleteTextView.hint = getString(R.string.encontrar) // Exiba o hint novamente
-                autoCompleteTextView.setCompoundDrawablesWithIntrinsicBounds(
-                    0,
-                    0,
-                    0,
-                    0
-                ) // Oculte o ícone de digitação
             }
         }
     }
