@@ -10,10 +10,15 @@ import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.example.clickon.DiagnosticGeral.PhoneDetailsActivityScreen
+import com.example.clickon.Cards.CardsPhone.AppleActivity
+import com.example.clickon.Cards.CardsPhone.MotorolaActivity
+import com.example.clickon.Cards.CardsPhone.SamsungActivity
+import com.example.clickon.Cards.CardsPhone.XiaomiActivity
+import com.example.clickon.DiagnosticGeral.PhoneDetailsActivitySoftware
 import com.example.clickon.R
 
-class SoftwareProblem: AppCompatActivity() {
+
+class SoftwareProblem : AppCompatActivity() {
 
     private lateinit var phoneList: List<PhoneItem>
 
@@ -21,6 +26,7 @@ class SoftwareProblem: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_modelphone)
         supportActionBar?.hide()
+
 
 
         val phoneSuggestions = listOf(
@@ -373,13 +379,43 @@ class SoftwareProblem: AppCompatActivity() {
 
                 view.setOnClickListener {
                     val phoneModel = phoneItem?.toString() ?: ""
-                    val intent = Intent(context, PhoneDetailsActivityScreen::class.java)
+                    val intent = Intent(context, PhoneDetailsActivitySoftware::class.java)
                     intent.putExtra(getString(R.string.phone_model), phoneModel)
                     context.startActivity(intent)
                 }
                 return view
             }
         }
+
+        val backButton = findViewById<Button>(R.id.button_back)
+        backButton.setOnClickListener {
+            finish()
+        }
+
+        val btnIplace = findViewById<ImageButton>(R.id.button_iplace)
+        btnIplace.setOnClickListener {
+            val intent = Intent(this, AppleActivity::class.java)
+            startActivity(intent)
+        }
+
+        val btnXiaomi = findViewById<ImageButton>(R.id.button_xiaomi)
+        btnXiaomi.setOnClickListener {
+            val intent = Intent(this, XiaomiActivity::class.java)
+            startActivity(intent)
+        }
+
+        val btnMotorola = findViewById<ImageButton>(R.id.button_motorola)
+        btnMotorola.setOnClickListener {
+            val intent = Intent(this, MotorolaActivity::class.java)
+            startActivity(intent)
+        }
+
+        val btnSamsung = findViewById<ImageButton>(R.id.button_samsung)
+        btnSamsung.setOnClickListener {
+            val intent = Intent(this, SamsungActivity::class.java)
+            startActivity(intent)
+        }
+
 
         val autoCompleteTextView = findViewById<AutoCompleteTextView>(R.id.button_search_phones)
         autoCompleteTextView.setAdapter(adapter)
@@ -409,5 +445,4 @@ class SoftwareProblem: AppCompatActivity() {
             }
         }
     }
-
 }

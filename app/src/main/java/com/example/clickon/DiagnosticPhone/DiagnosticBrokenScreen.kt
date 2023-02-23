@@ -10,9 +10,10 @@ import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.cardview.widget.CardView
-import androidx.fragment.app.FragmentTransaction
-import com.example.clickon.Cards.CardsPhone.*
+import com.example.clickon.Cards.CardsPhone.AppleActivity
+import com.example.clickon.Cards.CardsPhone.MotorolaActivity
+import com.example.clickon.Cards.CardsPhone.SamsungActivity
+import com.example.clickon.Cards.CardsPhone.XiaomiActivity
 import com.example.clickon.DiagnosticGeral.PhoneDetailsActivityScreen
 import com.example.clickon.R
 
@@ -386,28 +387,29 @@ class DiagnosticBrokenScreen : AppCompatActivity() {
             }
         }
 
-        val cardIplace = findViewById<CardView>(R.id.card_iplace)
+        val backButton = findViewById<Button>(R.id.button_back)
+        backButton.setOnClickListener {
+            finish()
+        }
+
         val btnIplace = findViewById<ImageButton>(R.id.button_iplace)
         btnIplace.setOnClickListener {
             val intent = Intent(this, AppleActivity::class.java)
             startActivity(intent)
         }
 
-        val cardXiaomi = findViewById<CardView>(R.id.card_xiaomi)
         val btnXiaomi = findViewById<ImageButton>(R.id.button_xiaomi)
         btnXiaomi.setOnClickListener {
             val intent = Intent(this, XiaomiActivity::class.java)
             startActivity(intent)
         }
 
-        val cardMotorola = findViewById<CardView>(R.id.card_motorola)
         val btnMotorola = findViewById<ImageButton>(R.id.button_motorola)
         btnMotorola.setOnClickListener {
             val intent = Intent(this, MotorolaActivity::class.java)
             startActivity(intent)
         }
 
-        val cardSamsung = findViewById<CardView>(R.id.card_samsung)
         val btnSamsung = findViewById<ImageButton>(R.id.button_samsung)
         btnSamsung.setOnClickListener {
             val intent = Intent(this, SamsungActivity::class.java)

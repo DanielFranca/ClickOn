@@ -14,6 +14,7 @@ class PhoneDetailsActivityScreen : AppCompatActivity() {
         val bundle = Bundle()
         bundle.putString(getString(R.string.phone_model), phoneModel)
 
+
         val fragment = PhoneDetailsFragmentScreen()
         fragment.arguments = bundle
 

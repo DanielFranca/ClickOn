@@ -1,6 +1,4 @@
-import android.os.Build.ID
-
-class PhoneItem(private val id: Int, private val phoneName: String, private val brand: String, private val flagImage: Int) {
+class PhoneItem(private val id: Int, val phoneName: String, private val brand: String, private val flagImage: Int) {
     fun toInt(): Int{
         return id
     }
