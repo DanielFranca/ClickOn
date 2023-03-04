@@ -27,7 +27,6 @@ class CategoryView(viewGroup: ViewGroup): ATViewHolder<Category, CategoryItemBin
                 override fun onError(e: Exception?) {
 
                 }
-
             })
     }
 

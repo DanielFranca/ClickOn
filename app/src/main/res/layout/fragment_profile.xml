@@ -1,56 +1,49 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_marginTop="16dp"
-        android:layout_height="112dp"
-        android:gravity="center"
+        android:layout_height="121dp"
+        android:layout_marginTop="40dp"
         android:paddingHorizontal="16dp">
 
-        <ImageView
-            android:id="@+id/image"
-            android:layout_marginRight="60dp"
-            android:layout_marginTop="10dp"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_gravity="left"
-            android:background="@drawable/ic_circle" />
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/user_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginBottom="33dp"
+            android:fontFamily="@font/arima_madurai_bold"
+            android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.213"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.494"
+            tools:ignore="NotSibling" />
 
-            <Button
-                android:id="@+id/btnCadastro"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/rounded_corner"
-                android:text="Cadastrar-se"
-                android:textAllCaps="false" />
+        <ImageButton
+            android:id="@+id/btnSair"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/rounded_corner"
+            android:src="@drawable/ic_logout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/btnEntrar"
-                android:layout_width="wrap_content"
-                android:layout_height="34dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/rounded_corner"
-                android:backgroundTint="@color/blue"
-                android:fontFamily="@font/arima_madurai_bold"
-                android:text="Entrar"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
 
-        </LinearLayout>
-
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <View
         android:id="@+id/divider"
@@ -104,6 +97,7 @@
         android:gravity="center_vertical">
 
         <Button
+            android:id="@+id/btnRegisterAssistance"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -221,6 +215,25 @@
             android:layout_marginRight="16dp"/>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnEntrar"
+        android:layout_width="373dp"
+        android:textSize="20dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider6"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="204dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/blue"
+        android:fontFamily="@font/arima_madurai_bold"
+        android:text="Entre já"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>

@@ -9,9 +9,11 @@
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/white</item>
-        <item name="android:navigationBarColor">@color/white</item>
-
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:textAppearance">@font/arima_madurai_bold</item>
         <item name="android:textViewStyle">@style/arimaMadurai</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+
 
     </style>
         <!-- Status bar color. -->

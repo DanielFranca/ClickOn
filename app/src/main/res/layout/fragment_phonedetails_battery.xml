@@ -29,6 +29,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="12dp"
+                android:drawablePadding="20dp"
+                android:drawableLeft="@drawable/ic_back"
                 android:layout_marginEnd="50dp"
                 android:fontFamily="@font/arima_madurai_bold"
                 android:text='Encontramos algumas assistências técnicas que fornecem o serviço de conserto de "bateria viciada" do celular: '

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "468579821458",
+    "project_id": "clickondevice-bd338",
+    "storage_bucket": "clickondevice-bd338.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468579821458:android:33dc8b9e032434c455434b",
+        "android_client_info": {
+          "package_name": "com.example.clickon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "468579821458-oc6sm0vqvig8c2hf8se4jikt4ug7mdoe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlP3bL9_O8vGpIZfQPDvfeSFLLT242kDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "468579821458-oc6sm0vqvig8c2hf8se4jikt4ug7mdoe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

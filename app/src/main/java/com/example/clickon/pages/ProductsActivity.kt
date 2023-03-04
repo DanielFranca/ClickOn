@@ -9,7 +9,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
-import com.example.clickon.FragmentsCategories.*
+import com.example.clickon.FragmentsCategories.ComputerFragment
+import com.example.clickon.FragmentsCategories.ExpressFragment
+import com.example.clickon.FragmentsCategories.StartFragment
+import com.example.clickon.FragmentsCategories.TabletFragment
 import com.example.clickon.R
 import com.example.clickon.databinding.ActivityProductsBinding
 import com.example.clickon.ui.Orders.OrdersFragment
@@ -131,6 +134,7 @@ class ProductsActivity : AppCompatActivity() {
         }
 
     }
+
 
 
 

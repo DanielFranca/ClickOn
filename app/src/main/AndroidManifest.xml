@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
 
     <application
         android:allowBackup="true"
@@ -109,6 +110,67 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <activity
+            android:name=".LoginUsers.Login"
+            android:exported="false"
+            android:theme="@style/Theme.ClickOn.">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".LoginUsers.RegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ClickOn.">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".LoginUsers.RecuperateAccountActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ClickOn.">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".pages.AssistancesActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ClickOn.">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".LoginAssistances.AssistancesLogin"
+            android:exported="false"
+            android:theme="@style/Theme.ClickOn.">
+
+        </activity>
+
+        <activity
+            android:name=".LoginAssistances.RegisterAssistances"
+            android:exported="false"
+            android:theme="@style/Theme.ClickOn.">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".LoginAssistances.RecuperateAccountAssistance"
+            android:exported="false"
+            android:theme="@style/Theme.ClickOn.">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
 
         <meta-data
             android:name="preloaded_fonts"

@@ -1,6 +1,5 @@
 package com.example.clickon.FragmentsCategories
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.widget.LinearLayout
@@ -8,7 +7,6 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import co.tiagoaguiar.atway.ui.adapter.ATAdapter
 import com.example.clickon.*
@@ -56,43 +54,18 @@ class StartFragment : Fragment(R.layout.fragment_start) {
         assistancesAdapter.items = arrayListOf(
             Assistances(1, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "ClickOn Celulares" ),
             Assistances(2, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "ClickOn Celulares" ),
-            Assistances(3, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "ClickOn Celulares" ),
-            Assistances(4, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "ClickOn Celulares" ),
-            Assistances(5, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "ClickOn Celulares" )
+            Assistances(3, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "ClickOn Celulares" )
+
+
         )
 
         MoreAssistancesAdapter.items = arrayListOf(
             MoreAssistances(1, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
             MoreAssistances(2, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
             MoreAssistances(3, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(4, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(5, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(6, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(7, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(8, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(9, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(10, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(11, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(12, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(13, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(14, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(15, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(16, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(17, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(18, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(19, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(20, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(21, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(22, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(23, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(24, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(25, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(26, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(27, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(28, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(29, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(30, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
-            MoreAssistances(31, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
+            MoreAssistances(1, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
+            MoreAssistances(2, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
+            MoreAssistances(3, "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTnBkIbNwjFpDvrZJtyIR7-uFvx_8ULp5nX_N_bbWQery2GbyyBVmhmpTyLVPiYHa7hJ0zj6L6l4HdU5h_qtKdtlyWKAg=w1359-h599", "Click Celulares", 4.4, "Celulares", 11.2, "120-180", 7.00),
         )
 
 
